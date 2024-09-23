@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        String partyAffiliation = "";
+
+        System.out.print("Enter the first letter of your party affiliation (Republican," +
+                "Independent,Democrat, or Other): ");
+
+        if (in.hasNext("[a-zA-Z]+")){
+
+            partyAffiliation = in.next().toUpperCase();
+
+            if (partyAffiliation.equals("R")){
+
+                System.out.println("Your a republican elephant");
+            }
+            else if (partyAffiliation.equals("D")){
+
+                System.out.println("Your a democrat donkey");
+            }
+            else if (partyAffiliation.equals("I")){
+
+                System.out.println("Your an independent person");
+
+            }else{
+
+                System.out.println("You chose other");
+            }
+
+        }else{
+            System.out.print("Please put in a valid input");
+        }
+
+    }
+}
