@@ -13,26 +13,25 @@ public class Main {
 
             partyAffiliation = in.next().toUpperCase();
 
-            if (partyAffiliation.equals("R")){
-
-                System.out.println("Your a republican elephant");
-            }
-            else if (partyAffiliation.equals("D")){
-
-                System.out.println("Your a democrat donkey");
-            }
-            else if (partyAffiliation.equals("I")){
-
-                System.out.println("Your an independent person");
-
-            }else{
-
-                System.out.println("You chose other");
+            switch (partyAffiliation) {
+                case "R":
+                    System.out.println("Your a republican elephant");
+                    break;
+                case "D":
+                    System.out.println("Your a democrat donkey");
+                    break;
+                case "I":
+                    System.out.println("Your an independent person");
+                    break;
+                default:
+                    System.out.println("You chose other");
+                    break;
             }
 
         }else{
             System.out.print("Please put in a valid input");
         }
+
 
     }
 }
